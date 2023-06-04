@@ -9,6 +9,15 @@ tasks_finisheds: List[str] = []
 
 
 def scan_os() -> str:
+    """
+    Identifica o sistema operacional em que o código está sendo executado e retorna o comando para limpar a tela do terminal.
+
+    Returns:
+        str: Comando para limpar a tela do terminal ('clear' para Linux e macOS, 'cls' para Windows).
+
+    Raises:
+        OSError: Caso a plataforma não seja suportada.
+    """
     try:
         if sys.platform == 'linux' or sys.platform == 'darwin':
             x = 'clear'
