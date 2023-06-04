@@ -35,5 +35,5 @@ Contribuições são bem-vindas! Se você encontrar algum problema, tiver sugest
 
 ## Licença
 
-Este projeto está licenciado sob a [MIT License](https://github.com/seu-usuario/seu-repositorio/blob/main/LICENSE).
+Este projeto está licenciado sob a [MIT License](https://github.com/devSantZ/todo_app_python)
 
