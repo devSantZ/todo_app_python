@@ -1,10 +1,11 @@
 import os
 from time import sleep
+from typing import List
 
-list_of_task = []
-tasks_finisheds = []
+list_of_task: List[str] = []
+tasks_finisheds: List[str] = []
 
-def exit_func():
+def exit_func() -> None:
     """
     Função que exibe uma mensagem de saída e limpa a tela.
     Aguarda por uma entrada do usuário e retorna quando qualquer tecla for pressionada.
@@ -14,7 +15,7 @@ def exit_func():
     if exit_user:
         return
 
-def create_task():
+def create_task() -> None:
     """
     Função que permite ao usuário criar uma nova tarefa.
     Solicita ao usuário que insira o texto da tarefa e a adiciona à lista de tarefas.
@@ -39,7 +40,7 @@ def create_task():
     except Exception as e:
         print(f'Erro: {e.__class__.__name__} - {e}')
 
-def list_task():
+def list_task() -> None:
     """
     Função que exibe a lista de tarefas atual.
     Percorre a lista de tarefas e exibe cada tarefa com um índice.
@@ -56,7 +57,7 @@ def list_task():
             print(i.replace(i, '( )'), j)
     exit_func()
 
-def edit_task():
+def edit_task() -> None:
     """
     Função que permite ao usuário editar uma tarefa existente.
     Exibe a lista de tarefas com seus índices e solicita ao usuário que insira o índice da tarefa a ser editada.
@@ -77,7 +78,7 @@ def edit_task():
     except ValueError:
         print('Insira apenas índices válidos.')
 
-def del_task():
+def del_task() -> None:
     """
     Função que permite ao usuário excluir uma tarefa existente.
     Exibe a lista de tarefas com seus índices e solicita ao usuário que insira o índice da tarefa a ser removida.
@@ -97,7 +98,7 @@ def del_task():
     except ValueError:
         print('Insira apenas índices válidos.')
 
-def finalize_task():
+def finalize_task() -> None:
     """
     Função que permite ao usuário marcar uma tarefa como concluída.
     Exibe a lista de tarefas com seus índices e solicita ao usuário que insira o índice da tarefa a ser concluída.
@@ -115,7 +116,7 @@ def finalize_task():
             sleep(2)
             os.system('clear')
         else:
-            print('Essa tarefa já foi concluíada')
+            print('Essa tarefa já foi concluída')
     except IndexError:
         print('Não existe esse índice.')
     except ValueError:
