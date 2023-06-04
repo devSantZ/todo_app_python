@@ -68,8 +68,12 @@ def create_task() -> None:
             os.system(scan_os())
 
     except ValueError as ve:
+        sleep(2)
+        os.system(scan_os())
         print(f'Erro: {ve}')
     except Exception as e:
+        sleep(2)
+        os.system(scan_os())
         print(f'Erro: {e.__class__.__name__} - {e}')
 
 
@@ -109,8 +113,12 @@ def edit_task() -> None:
         os.system(scan_os())
 
     except IndexError:
+        sleep(2)
+        os.system(scan_os())
         print('Não existe esse índice.')
     except ValueError:
+        sleep(2)
+        os.system(scan_os())
         print('Insira apenas índices válidos.')
 
 
@@ -132,7 +140,11 @@ def del_task() -> None:
         list_of_task.pop(task_for_del)
     except IndexError:
         print('Não existe esse índice.')
+        sleep(2)
+        os.system(scan_os())
     except ValueError:
+        sleep(2)
+        os.system(scan_os())
         print('Insira apenas índices válidos.')
 
 
@@ -157,8 +169,12 @@ def finalize_task() -> None:
         else:
             print('Essa tarefa já foi concluída')
     except IndexError:
+        sleep(2)
+        os.system(scan_os())
         print('Não existe esse índice.')
     except ValueError:
+        sleep(2)
+        os.system(scan_os())
         print('Insira apenas índices válidos.')
 
 
