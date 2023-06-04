@@ -5,6 +5,7 @@ from typing import List
 list_of_task: List[str] = []
 tasks_finisheds: List[str] = []
 
+
 def exit_func() -> None:
     """
     Função que exibe uma mensagem de saída e limpa a tela.
@@ -14,6 +15,7 @@ def exit_func() -> None:
     os.system('clear')
     if exit_user:
         return
+
 
 def create_task() -> None:
     """
@@ -40,6 +42,7 @@ def create_task() -> None:
     except Exception as e:
         print(f'Erro: {e.__class__.__name__} - {e}')
 
+
 def list_task() -> None:
     """
     Função que exibe a lista de tarefas atual.
@@ -56,6 +59,7 @@ def list_task() -> None:
         else:
             print(i.replace(i, '( )'), j)
     exit_func()
+
 
 def edit_task() -> None:
     """
@@ -78,6 +82,7 @@ def edit_task() -> None:
     except ValueError:
         print('Insira apenas índices válidos.')
 
+
 def del_task() -> None:
     """
     Função que permite ao usuário excluir uma tarefa existente.
@@ -97,6 +102,7 @@ def del_task() -> None:
         print('Não existe esse índice.')
     except ValueError:
         print('Insira apenas índices válidos.')
+
 
 def finalize_task() -> None:
     """
@@ -121,6 +127,7 @@ def finalize_task() -> None:
         print('Não existe esse índice.')
     except ValueError:
         print('Insira apenas índices válidos.')
+
 
 while True:
     user = input('Escolha uma opção para continuar:\n'
