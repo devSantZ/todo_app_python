@@ -1,18 +1,32 @@
 import os
 from time import sleep
+import sys
 from typing import List
 
 list_of_task: List[str] = []
 tasks_finisheds: List[str] = []
 
 
+def scan_os():
+    try:
+        if sys.platform == 'linux' or sys.platform == 'linux':
+            x = 'clear'
+        if sys == 'Windows':
+            x = 'cls'
+        return x
+    except:
+        print(f'Não foi possível identificar seu sitema operacional, o código pode'
+              f'não funcionar corretamente!!')
+  
+
+    
 def exit_func() -> None:
     """
     Função que exibe uma mensagem de saída e limpa a tela.
     Aguarda por uma entrada do usuário e retorna quando qualquer tecla for pressionada.
     """
     exit_user = input('Pressione qualquer tecla para sair.  ')
-    os.system('clear')
+    os.system(scan_os)
     if exit_user:
         return
 
@@ -33,10 +47,10 @@ def create_task() -> None:
             print('A tarefa já está na lista.')
         else:
             list_of_task.append(user_task)
-            os.system('clear')
+            os.system(scan_os)
             print(f'Você adicionou "{user_task}" na sua lista de afazeres.')
             sleep(1)
-            os.system('clear')
+            os.system(scan_os)
     except ValueError as ve:
         print(f'Erro: {ve}')
     except Exception as e:
@@ -76,7 +90,7 @@ def edit_task() -> None:
         list_of_task[task_for_edit] = new_value
         print('Tarefa editada com sucesso')
         sleep(2)
-        os.system('clear')
+        os.system(scan_os)
     except IndexError:
         print('Não existe esse índice.')
     except ValueError:
@@ -96,7 +110,7 @@ def del_task() -> None:
         task_for_del = int(input('Insira o índice da tarefa a ser removida: '))
         print(f'A tarefa "{list_of_task[task_for_del]}" foi removida com sucesso!')
         sleep(2)
-        os.system('clear')
+        os.system(scan_os)
         list_of_task.pop(task_for_del)
     except IndexError:
         print('Não existe esse índice.')
@@ -120,7 +134,7 @@ def finalize_task() -> None:
             tasks_finisheds.append(value)
             print(f'Parabéns, voce concluiu a tarefa {value}')
             sleep(2)
-            os.system('clear')
+            os.system(scan_os)
         else:
             print('Essa tarefa já foi concluída')
     except IndexError:
@@ -128,7 +142,7 @@ def finalize_task() -> None:
     except ValueError:
         print('Insira apenas índices válidos.')
 
-
+scan_os()
 while True:
     user = input('Escolha uma opção para continuar:\n'
                  f'(1) Criar tarefa.\n'
@@ -140,26 +154,26 @@ while True:
                  f'-> ').lower()
 
     if user == '1':
-        os.system('clear')
+        os.system(scan_os)
         create_task()
     elif user == '2':
-        os.system('clear')
+        os.system(scan_os)
         list_task()
     elif user == '3':
-        os.system('clear')
+        os.system(scan_os)
         edit_task()
     elif user == '4':
-        os.system('clear')
+        os.system(scan_os)
         del_task()
     elif user == '5':
-        os.system('clear')
+        os.system(scan_os)
         finalize_task()
     elif user == 's':
-        os.system('clear')
+        os.system(scan_os)
         break
     else:
-        os.system('clear')
+        os.system(scan_os)
         print('Por favor, escolha uma opção válida!')
         sleep(3)
-        os.system('clear')
+        os.system(scan_os)
         continue
