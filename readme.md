@@ -1,39 +1,38 @@
 # TODO List
 
-Este é um programa simples em Python para gerenciamento de tarefas (TODO list). Ele permite que você crie, liste, edite, apague e finalize tarefas.
+This is a simple Python program for task management (TODO list). It allows you to create, list, edit, delete, and complete tasks.
 
-## Requisitos
+## Requirements
 
 - Python 3.x
 
-## Como usar
+## How to Use
 
-1. Baixe ou clone este repositório em seu computador.
-2. Navegue até o diretório onde o código está localizado.
-3. Execute o programa com o seguinte comando:
+1. Download or clone this repository to your computer.
+2. Navigate to the directory where the code is located.
+3. Run the program with the following command:
 
     ```
     python todo_list.py
     ```
 
-4. O programa apresentará um menu com as opções disponíveis. Escolha uma opção digitando o número correspondente ou 's' para sair.
-5. Siga as instruções fornecidas pelo programa para criar, listar, editar, apagar ou finalizar tarefas.
+4. The program will present a menu with available options. Choose an option by entering the corresponding number or 's' to exit.
+5. Follow the instructions provided by the program to create, list, edit, delete, or complete tasks.
 
-## Funcionalidades
+## Features
 
-O programa oferece as seguintes funcionalidades:
+The program offers the following features:
 
-- Criar uma nova tarefa
-- Listar todas as tarefas, mostrando seu estado (concluída ou não)
-- Editar o texto de uma tarefa existente
-- Apagar uma tarefa
-- Marcar uma tarefa como concluída
+- Create a new task
+- List all tasks, showing their status (completed or not)
+- Edit the text of an existing task
+- Delete a task
+- Mark a task as completed
 
-## Contribuição
+## Contribution
 
-Contribuições são bem-vindas! Se você encontrar algum problema, tiver sugestões de melhorias ou quiser adicionar novos recursos, sinta-se à vontade para abrir uma "issue" ou enviar um "pull request" neste repositório.
+Contributions are welcome! If you find any issues, have suggestions for improvements, or want to add new features, feel free to open an issue or submit a pull request in this repository.
 
-## Licença
+## License
 
-Este projeto está licenciado sob a [MIT License](https://github.com/devSantZ/todo_app_python)
-
+This project is licensed under the [MIT License](https://github.com/devSantZ/todo_app_python)
