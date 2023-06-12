@@ -112,6 +112,9 @@ def edit_task() -> None:
     try:
         task_for_edit = int(input('Índice a editar: '))
         new_value = input('Reescrevendo tarefa: ')
+        if not new_value.strip():
+            raise ValueError('A tarefa não pode estar vazia ou conter apenas espaços.')
+
         list_of_task[task_for_edit] = new_value
         print('Tarefa editada com sucesso')
         sleep(2)
