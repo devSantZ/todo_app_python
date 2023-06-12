@@ -90,7 +90,7 @@ def list_task() -> None:
     for i, j in enumerate(list_of_task):
         i = str(i)
         if j in tasks_finisheds:
-            print(i.replace(i, '(x)'), j)
+            print(i.replace(i, '(✔)'), j)
         else:
             print(i.replace(i, '( )'), j)
     exit_func()
